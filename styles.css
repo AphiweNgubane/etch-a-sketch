@@ -15,7 +15,7 @@ body {
 
 .cell {
     border: 1px solid black;
-    width: 59px;
-    height: 59px;
-    flex: auto;
+    flex: calc(100% / 16);
+    height: calc(100% / 16);
+    box-sizing: border-box;
 }
