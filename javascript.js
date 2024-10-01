@@ -7,3 +7,15 @@ for (let i = 0; i < 16; i++) {
         grid.appendChild(cell);
     }
 }
+
+document.querySelectorAll(".cell").forEach(cell => {
+
+    cell.addEventListener("mouseenter", () => {
+        cell.style.backgroundColor = "green";
+    });
+
+    cell.addEventListener("mouseleave", () => {
+        cell.style.backgroundColor = "green";
+    });
+});
+
