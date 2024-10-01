@@ -11,11 +11,28 @@ for (let i = 0; i < 16; i++) {
 document.querySelectorAll(".cell").forEach(cell => {
 
     cell.addEventListener("mouseenter", () => {
-        cell.style.backgroundColor = "green";
+        cell.style.backgroundColor = "blue";
     });
 
     cell.addEventListener("mouseleave", () => {
-        cell.style.backgroundColor = "green";
+        cell.style.backgroundColor = "lightblue";
     });
 });
+
+
+const newGridBtn = document.createElement("button");
+newGridBtn.textContent = "Generate New Grid";
+newGridBtn.addEventListener("click", () => {
+    let sqrsPerSide = prompt("Enter the number of squares per side from 1 to 100:", 16);
+    sqrsPerSide = parseInt(sqrsPerSide);
+
+    if (isNaN(sqrsPerSide) || sqrsPerSide < 1 || sqrsPerSide > 100) {
+        alert("Please enter a number between 1 and 100.");
+    } else {
+        createGrid(sqrsPerSide);
+    }
+});
+
+const body = document.querySelector("body");
+body.insertBefore(newGridBtn, grid);
 
