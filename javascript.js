@@ -46,9 +46,8 @@ function createGrid(sqrsPerSide) {
         newCells.classList.add("newCells");
         grid.appendChild(newCells);
 
-        const newCellSize = 40 / sqrsPerSide;
-        newCells.style.width = `${newCellSize}vw`;
-        newCells.style.height = `${newCellSize}vw`;
+        newCells.style.flex = `0 0 calc(100% / ${sqrsPerSide})`;
+        newCells.style.height = `calc(100% / ${sqrsPerSide})`;
     }
 
     document.querySelectorAll(".newCells").forEach(newCells => {
