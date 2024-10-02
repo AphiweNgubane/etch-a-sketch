@@ -22,8 +22,8 @@ body {
 }
 
 button {
-    width: fit-content;
-    font-size: 40px;
+    width: 30%;
+    font-size: 2vw;
     font-weight: bold;
     color: white;
     background-color: navy;
