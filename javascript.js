@@ -14,7 +14,7 @@ document.querySelectorAll(".cell").forEach(cell => {
     });
 
     cell.addEventListener("mouseleave", () => {
-        cell.style.backgroundColor = "lightblue";
+        cell.style.backgroundColor = "black";
     });
 });
 
@@ -56,7 +56,7 @@ function createGrid(sqrsPerSide) {
         });
 
         newCells.addEventListener("mouseleave", () => {
-            newCells.style.backgroundColor = "lightblue";
+            newCells.style.backgroundColor = "black";
         });
     });
 }

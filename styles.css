@@ -1,6 +1,7 @@
 body {
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 #grid {
@@ -21,8 +22,16 @@ body {
 }
 
 button {
-    font-size: 20px;
-    border-radius: 40%;
+    width: fit-content;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    background-color: navy;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 5px solid black;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 
 .newCells {
