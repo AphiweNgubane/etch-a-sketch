@@ -9,7 +9,6 @@ for (let i = 0; i < 16; i++) {
 }
 
 document.querySelectorAll(".cell").forEach(cell => {
-
     cell.addEventListener("mouseenter", () => {
         cell.style.backgroundColor = "blue";
     });
@@ -39,5 +38,26 @@ newGridBtn.addEventListener("click", () => {
     }
 });
 
+function createGrid(sqrsPerSide) {
+    grid.innerHTML = '';
 
+    for (let k = 0; k < sqrsPerSide * sqrsPerSide; k++) {
+        const newCells = document.createElement("div");
+        newCells.classList.add("newCells");
+        grid.appendChild(newCells);
 
+        const newCellSize = 40 / sqrsPerSide;
+        newCells.style.width = '${newCellSize}vw';
+        newCells.style.height = '${newCellSize}vw';
+    }
+
+    document.querySelectorAll(".newCells").forEach(newCells => {
+        newCells.addEventListener("mouseenter", () => {
+            newCells.style.backgroundColor = "blue";
+        });
+
+        newCells.addEventListener("mouseleave", () => {
+            newCells.style.backgroundColor = "lightblue";
+        });
+    });
+}
